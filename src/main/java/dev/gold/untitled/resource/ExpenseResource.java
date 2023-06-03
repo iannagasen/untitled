@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import dev.gold.untitled.domain.Expense;
 import dev.gold.untitled.domain.ExpenseService;
+import dev.gold.untitled.domain.ExpenseType;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -23,6 +24,11 @@ public class ExpenseResource {
   public List<Expense> getAll() {
     log.info("ExpenseResource::getAll");
     return expenseService.getAll();
+  }
+  
+  @GetMapping("/types")
+  public List<ExpenseType> getAllExpenseType(){
+	  return expenseService.getAllExpenseType();
   }
 
 }
