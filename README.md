@@ -1,3 +1,5 @@
+# Expense Tracking System:
+---
 @Authors:
 
 - Agasen, Ian Neil
