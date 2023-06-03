@@ -67,3 +67,12 @@ erDiagram
       string name
    }
 ```
+
+### PACKAGE STRUCTURE
+
+1. Resource
+   - Controller
+2. Domain
+   - Model
+   - Service
+   - Repository
