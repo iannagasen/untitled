@@ -2,6 +2,7 @@ package dev.gold.untitled.resource;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,12 +21,14 @@ public class IncomeResource {
 
   private final IncomeService incomeService;
 
+  @CrossOrigin
   @GetMapping
   public List<Income> getAll() {
     log.info("IncomeResource::getAll");
     return incomeService.getAll();
   }
   
+  @CrossOrigin
   @GetMapping("/types")
   public List<IncomeType> getAllIncomeType(){
 	  return incomeService.getAllIncomeType();

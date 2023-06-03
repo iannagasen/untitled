@@ -1,4 +1,4 @@
-V3__create_expenses_type_table.sql# Expense Tracking System:
+# Expense Tracking System:
 
 @Authors:
 
@@ -28,9 +28,9 @@ Savings(Goal) = Income - Expenses
 4. Income Type:
    1. Values:
       1. Q - quarterly
-      2. A
-      3. M
-      4. S
+      2. A - annual
+      3. M - monthly
+      4. S - semi-annual
 
 ### Tables:
 
@@ -80,6 +80,10 @@ erDiagram
 ### Accessing H2 Embeded:
 
 URL: http://localhost:8080/h2-console/login.jsp?jsessionid=e1e30c3eea07f8f8aca15f9a7938e3cf
+
+### Accessing Swagger-ui
+
+URL: http://localhost:8080/swagger-ui/index.html#
 
 ### Endpoints:
 
