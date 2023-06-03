@@ -76,3 +76,12 @@ erDiagram
    - Model
    - Service
    - Repository
+
+### Accessing H2 Embeded:
+
+URL: http://localhost:8080/h2-console/login.jsp?jsessionid=e1e30c3eea07f8f8aca15f9a7938e3cf
+
+### Endpoints:
+
+- /expenses:
+  - GET - get all expenses
