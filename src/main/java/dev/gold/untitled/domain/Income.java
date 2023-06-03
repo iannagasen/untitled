@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -18,13 +17,13 @@ import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 @Entity
-@Table(name = "expenses")
+@Table(name = "income")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Expense {
+public class Income {
 
   @Id
   private Long id;
@@ -32,10 +31,10 @@ public class Expense {
   private Long userId;
   
   @OneToOne(cascade = CascadeType.ALL)
-  @JoinColumn(name = "expense_type_id", referencedColumnName = "id")
-  private ExpenseType expenseType;
+  @JoinColumn(name = "income_type_id", referencedColumnName = "id")
+  private IncomeType incomeType;
   
-  private BigDecimal amount;
-  private LocalDate effectivityDate;
   private LocalDate createdDate;
+  private BigDecimal amount;
+
 }
