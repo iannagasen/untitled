@@ -1,5 +1,3 @@
-V3__create_expenses_type_table.sql# Expense Tracking System:
-
 @Authors:
 
 - Agasen, Ian Neil
