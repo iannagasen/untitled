@@ -1,5 +1,6 @@
 package dev.gold.untitled.domain;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -19,14 +20,18 @@ public class ExpenseService {
     log.info("Executing ExpenseService::getAll");
     return expenseRepository.findAll();
   }
-  
+
   public List<ExpenseType> getAllExpenseType() {
-	log.info("Getting list of all Expense Type");
-	return expenseTypeRepository.findAll();
+    log.info("Getting list of all Expense Type");
+    return expenseTypeRepository.findAll();
   }
-  
+
   public List<Expense> getAllExpenseByMonth(int year, int month, int day) {
-		log.info("Getting list of all Expense filtered by Month");
-		return expenseRepository.findByMonth(year,month,day);
-	  }
+    log.info("Getting list of all Expense filtered by Month");
+    return expenseRepository.findByMonth(year, month, day);
+  }
+
+  public List<Expense> getAllExpensesBetween(LocalDate from, LocalDate to) {
+    return expenseRepository.findAllByEffectivityDateBetween(from, to);
+  }
 }

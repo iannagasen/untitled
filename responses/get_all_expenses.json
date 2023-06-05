@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1000,
+    "userId": 1,
+    "expenseType": "Transportation",
+    "amount": 100,
+    "effectivityDate": "2023-06-01",
+    "createdDate": "2023-06-02"
+  },
+  {
+    "id": 1001,
+    "userId": 2,
+    "expenseTypeId": 2,
+    "amount": 50,
+    "effectivityDate": "2023-06-01",
+    "createdDate": "2023-06-02"
+  }
+]
