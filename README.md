@@ -68,6 +68,7 @@ erDiagram
       int id PK
       string name
    }
+
 ```
 
 ### PACKAGE STRUCTURE
@@ -91,3 +92,12 @@ URL: http://localhost:8080/swagger-ui/index.html#
 
 - /expenses:
   - GET - get all expenses
+
+### TODO
+
+- [ ] Add Exception Handling
+- [ ] Create Audit Trail / Historical Table
+- [ ] CRUD Function for Expense Type
+- [ ] CRUD Function for Expenses
+- [ ] CRUD Function for Income
+- [ ] /savings/{day} - tbd
