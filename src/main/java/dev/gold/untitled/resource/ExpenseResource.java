@@ -26,22 +26,21 @@ public class ExpenseResource {
   @CrossOrigin
   @GetMapping
   public List<Expense> getAll() {
-    log.info("ExpenseResource::getAll");
     return expenseService.getAll();
   }
-  
+
   @CrossOrigin
   @GetMapping("/types")
-  public List<ExpenseType> getAllExpenseType(){
-	  return expenseService.getAllExpenseType();
+  public List<ExpenseType> getAllExpenseType() {
+    return expenseService.getAllExpenseType();
   }
 
   @CrossOrigin
   @GetMapping("/date")
   public List<Expense> getAllExpenseByMonth(@RequestParam(required = false) int year,
-		  									@RequestParam(required = false) int month,
-		  									@RequestParam(required = false) int day){
-	  return expenseService.getAllExpenseByMonth(year,month,day);
+      @RequestParam(required = false) int month,
+      @RequestParam(required = false) int day) {
+    return expenseService.getAllExpenseByMonth(year, month, day);
   }
-  
+
 }
