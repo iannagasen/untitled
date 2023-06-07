@@ -25,8 +25,8 @@ public class ExpenseService {
 	return expenseTypeRepository.findAll();
   }
   
-  public List<Expense> getAllExpenseByMonth(int year, int month, int day) {
-		log.info("Getting list of all Expense filtered by Month");
-		return expenseRepository.findByMonth(year,month,day);
+  public List<Expense> getAllExpenseByDate(String year, String month, String day) {
+	log.info("Getting list of all Expense filtered by Date");
+	return expenseRepository.findByDate(year,month,day);
 	  }
 }

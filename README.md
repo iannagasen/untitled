@@ -91,7 +91,13 @@ URL: http://localhost:8080/swagger-ui/index.html#
 ### Endpoints:
 
 - /expenses:
-  - GET - get all expenses
+  - GET/expense - get all expenses
+  - GET/expense/types - get all expense types
+  - GET/expense/date - get all expenses filtered by date
+  
+- /income:
+  - GET/income - get all income
+  - GET/income/types - get all income types
 
 ### TODO
 
@@ -101,3 +107,4 @@ URL: http://localhost:8080/swagger-ui/index.html#
 - [ ] CRUD Function for Expenses
 - [ ] CRUD Function for Income
 - [ ] /savings/{day} - tbd
+- CLARIFY IF INCOME 

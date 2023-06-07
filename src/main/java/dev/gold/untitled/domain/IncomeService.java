@@ -24,4 +24,9 @@ public class IncomeService {
 	log.info("Getting list of all Expense Type");
 	return incomeTypeRepository.findAll();
   }
+  
+  public List<Income> getAllIncomeByDate(String year, String month, String day) {
+	log.info("Getting list of all Income filtered by Date");
+	return incomeRepository.findByDate(year,month,day);
+	  }
 }
