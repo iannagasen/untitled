@@ -22,7 +22,9 @@ public class ExpenseService {
     return expenseTypeRepository.findAll();
   }
 
-  public List<Expense> getAllExpenseByMonth(int year, int month, int day) {
-    return expenseRepository.findByMonth(year, month, day);
-  }
+  public List<Expense> getAllExpenseByDate(String year, String month, String day) {
+
+	return expenseRepository.findByDate(year,month,day);
+	  }
+
 }

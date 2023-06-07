@@ -18,6 +18,6 @@ public interface ExpenseRepository extends JpaRepository<Expense, Long> {
 		AND MONTH(e.effectivityDate) = NVL(?2,MONTH(e.effectivityDate))
 		AND DAY(e.effectivityDate) = NVL(?3,DAY(e.effectivityDate))
 	""")
-	List<Expense> findByMonth(int year, int month, int day);
+	List<Expense> findByDate(String year, String month, String day);
 
 }

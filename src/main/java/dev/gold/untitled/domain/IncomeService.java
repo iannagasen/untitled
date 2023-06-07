@@ -21,4 +21,9 @@ public class IncomeService {
   public List<IncomeType> getAllIncomeType() {
     return incomeTypeRepository.findAll();
   }
+  
+  public List<Income> getAllIncomeByDate(String year, String month, String day) {
+
+	return incomeRepository.findByDate(year,month,day);
+	  }
 }
