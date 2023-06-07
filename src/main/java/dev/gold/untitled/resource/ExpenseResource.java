@@ -23,20 +23,18 @@ import lombok.extern.slf4j.Slf4j;
 public class ExpenseResource {
 
   private final ExpenseService expenseService;
-
-//  @CrossOrigin
-//  @GetMapping
-//  @Operation(summary = "Retrieve all expenses records")
-//  public List<Expense> get1All() {
-//    log.info("ExpenseResource::getAll");
-//    return expenseService.getAll();
-//  }
   
   @CrossOrigin
+  @GetMapping
+  public List<Expense> getAll() {
+    return expenseService.getAll();
+  }
+
+  @CrossOrigin
   @GetMapping("/types")
-  @Operation(summary = "Retrieve all expense type records")
-  public List<ExpenseType> getAllExpenseType(){
-	  return expenseService.getAllExpenseType();
+  public List<ExpenseType> getAllExpenseType() {
+    return expenseService.getAllExpenseType();
+
   }
 
   @CrossOrigin
@@ -46,6 +44,7 @@ public class ExpenseResource {
 		  									@RequestParam(required = false) String month,
 		  									@RequestParam(required = false) String day){
 	  return expenseService.getAllExpenseByDate(year,month,day);
+
   }
-  
+
 }

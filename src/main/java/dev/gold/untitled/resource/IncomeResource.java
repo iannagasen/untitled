@@ -19,23 +19,21 @@ import lombok.extern.slf4j.Slf4j;
 @RestController
 @RequestMapping("/income")
 @RequiredArgsConstructor
-@Slf4j
 public class IncomeResource {
 
   private final IncomeService incomeService;
 
-//  @CrossOrigin
-//  @GetMapping
-//  public List<Income> getAll() {
-//    log.info("IncomeResource::getAll");
-//    return incomeService.getAll();
-//  }
-  
+  @CrossOrigin
+  @GetMapping
+  public List<Income> getAll() {
+    return incomeService.getAll();
+  }
+
   @CrossOrigin
   @GetMapping("/types")
-  @Operation(summary = "Retrieve all income type records")
-  public List<IncomeType> getAllIncomeType(){
-	  return incomeService.getAllIncomeType();
+  public List<IncomeType> getAllIncomeType() {
+    return incomeService.getAllIncomeType();
+
   }
 
   @CrossOrigin
