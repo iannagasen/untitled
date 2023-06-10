@@ -7,6 +7,10 @@
 - Agasen, Ian Neil
 - Agulto, Ajay
 
+## Dependencies:
+1. Authorization Server [Experimental | WIP] - `https://github.com/iannagasen/authorization-server`
+2. Expense Tracker UI [WIP] - `https://github.com/iannagasen/expense-tracker-ui`
+
 ### Usage:
 
 UI:
